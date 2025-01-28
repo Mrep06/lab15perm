@@ -10,12 +10,20 @@ int main(){
 	
 	srand(time(0));	
 	
-	for(int i = 0;i < 10;i++){
+	//for(int i = 0;i < 10;i++){
 	    shuffle(a,b,c,d);
-	    cout << a << " " << b << " " << c << " " << d << endl;
-	}
+	    //cout << a << " " << b << " " << c << " " << d << endl;
+	//}
 	
 	return 0;
 }
 
 //Do not modify source code above this line
+
+void shuffle(int &a,int &b,int &c,int &d){
+	int random = rand()%4;
+	int money[] = {a,b,c,d};
+	for(int i = 0; i < 4; i++){
+		cout << money[i];
+	}
+}
