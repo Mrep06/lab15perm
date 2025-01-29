@@ -22,14 +22,12 @@ int main(){
 //Write definition of shuffle() using pointer after this line. 
 
 void shuffle(int *a,int *b,int *c,int *d){
-	int random = rand()%4;
 	int* money[] = {a,b,c,d};
 	for(int i = 0; i < 4; i++){
-		int j = random;
+		int j = rand()%4;
 		int x = *money[i];
 		*money[i] = *money[j];
 		*money[j] = x;
 	}
 
 }
-
