@@ -10,10 +10,10 @@ int main(){
 	
 	srand(time(0));	
 	
-	//for(int i = 0;i < 10;i++){
+	for(int i = 0;i < 10;i++){
 	    shuffle(a,b,c,d);
-	    //cout << a << " " << b << " " << c << " " << d << endl;
-	//}
+	    cout << a << " " << b << " " << c << " " << d << endl;
+	}
 	
 	return 0;
 }
@@ -21,9 +21,17 @@ int main(){
 //Do not modify source code above this line
 
 void shuffle(int &a,int &b,int &c,int &d){
-	int random = rand()%4;
 	int money[] = {a,b,c,d};
-	for(int i = 0; i < 4; i++){
-		cout << money[i];
+	
+	for(int i = 0; i<4 ;i++){
+		int j = rand()%4;
+		int x = money[i];
+		money[i] = money[j];
+		money[j] = x;
 	}
+	a = money[0];
+	b = money[1];
+	c = money[2];
+	d = money[3];
+	
 }
