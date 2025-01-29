@@ -27,7 +27,7 @@ void shuffle(int *a,int *b,int *c,int *d){
 	for(int i = 0; i < 4; i++){
 		int j = random;
 		int x = *money[i];
-		money[i] = *money[j];
+		*money[i] = *money[j];
 		*money[j] = x;
 	}
 
